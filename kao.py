@@ -16,8 +16,7 @@ async def on_ready():
 async def on_message(message):
 	if message.content.startswith('$help'):
 		await client.send_message(message.channel, '**Help**\n-Command one\n-Command two\n-Command three')
+		await session.close()
 
-
-await session.close()
-
+		
 #client.run('')
