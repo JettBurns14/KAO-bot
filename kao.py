@@ -18,7 +18,7 @@ async def on_message(message):
 		await client.send_message(message.channel, '**Help**\n-Command one\n-Command two\n-Command three')
 
 		
-@client.listener('after_server_stop'):
+@client.listener('after_server_stop')
     await session.close()
 
 		
