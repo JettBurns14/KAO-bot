@@ -18,5 +18,5 @@ async def on_message(message):
 		await client.send_message(message.channel, '**Help**\n```Command one\nCommand two\nCommand three```')
 
 
-client.session.close()
+client.close()
 #client.run('')
