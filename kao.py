@@ -19,7 +19,7 @@ async def on_message(message):
 
 		
 @client.listener('after_server_stop')
-    await session.close()
+await session.close()
 
 		
 #client.run('')
