@@ -1,1 +1,1 @@
-worker: python kao.py
+worker: node kao.js
