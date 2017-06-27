@@ -325,7 +325,7 @@ client.on('message', message => {
         if (args[0] === 'Jett' || args[0] === 'Jett Burns') {
             let embed = new Discord.RichEmbed(); 
             embed.setColor("#963c69");
-            embed.addField(args[0], 'Jett's events');
+            embed.addField(args[0], 'Jett\'s events');
             message.channel.sendEmbed(embed);
         }
     }
