@@ -4,233 +4,868 @@ const client = new Discord.Client()
 
 
 const olympians = [
-    /** TBL **/
+    /** Blue */
     [
-        "Math Hopper - HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess, Typing",
-        "Mystery - HTML/CSS, Chess",
-        "legowar - JS (Drawing), JS (Animation), JS (Object Oriented Design), SQL, Chess, Typing",
-        "King Winston - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL",
-        "Kephas Wallace - JS (Drawing), JS (Animation)",
-        "intuitive.tinkerer - JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "PhineasGreene - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "Zidervin - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "chazi - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "R Johnson - JS (Drawing), JS (Animation), HTML/CSS, EP Race, Chess, Typing",
-        "TheArchDuke - JS (Drawing), JS (Animation)",
-        "Jack S. Gilbert - JS (Drawing), JS (Animation), JS (Object Oriented Design), EP Race",
-        "SilverWolf - JS (Drawing), JS (Object Oriented Design), EP Race",
-        "pinkpuppy22 - JS (Drawing), HTML/CSS, Typing",
-        "Summer - JS (Drawing), HTML/CSS, Math Puzzles, EP Race",
-        "nykajak - JS (Drawing), HTML/CSS, Math Puzzles, EP Race, Chess",
-        "Barrow-Wight - Math Puzzles, Chess, Typing",
-        "WritersBlock52 - JS (Drawing)",
-        "aidan01pay - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "reborn128 - JS (Drawing), JS (Animation), Math Puzzles",
-        "Sane_Sea - Math Puzzles",
-        "Alejandro The Awesome - Math Puzzles, EP Race, Chess",
-        "Gimli the Dorf - Math Puzzles, EP Race, Chess",
-        "Joshua - HTML/CSS, Math Puzzles, EP Race, Chess, Typing",
-        "Orange leaf - JS (Drawing)", "LJG911 - JS (Drawing)",
-        "SuperRyan - JS (Drawing), HTML/CSS, Math Puzzles, Chess",
-        "ᵀʰᵉ ᴵᶰᶠᶤᶰᶤᵗᵉˢᶤᵐᵃˡ - Math Puzzles, Chess",
-        "JoeTheObjectPup - JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess",
-        "Aaron Leong - JS (Drawing), JS (Animation), JS (Object Oriented Design), Chess",
-        "The #1 Triangle Proponent - JS (Drawing), Math Puzzles, Chess",
-        "B.K. - HTML/CSS",
-        "white.strawberry - JS (Drawing), Math Puzzles, Chess",
-        "Noel Negash - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, Chess",
-        "XSwerbensky - JS (Object Oriented Design), HTML/CSS, SQL, Math Puzzles, Energy Point Race, Chess, Typing",
+        {
+            player: 'Math Hopper',
+            events: 'HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: 'Mystery',
+            events: 'HTML/CSS, Chess'
+        },
+        {
+            player: 'legowar',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), SQL, Chess, Typing'
+        },
+        {
+            player: 'King Winston',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL'
+        },
+        {
+            player: 'Kephas Wallace',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'intuitive.tinkerer',
+            events: 'JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'PhineasGreene',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'Zidervin',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'chazi',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'R Johnson',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, EP Race, Chess, Typing'
+        },
+        {
+            player: 'TheArchDuke',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'Jack S. Gilbert',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), EP Race'
+        },
+        {
+            player: 'SilverWolf',
+            events: 'JS (Drawing), JS (Object Oriented Design), EP Race'
+        },
+        {
+            player: 'pinkpuppy22',
+            events: 'JS (Drawing), HTML/CSS, Typing'
+        },
+        {
+            player: 'Summer',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, EP Race'
+        },
+        {
+            player: 'nykajak',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Barrow-Wight',
+            events: 'Math Puzzles, Chess, Typing'
+        },
+        {
+            player: 'WritersBlock52',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'aidan01pay',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'reborn128',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles'
+        },
+        {
+            player: 'Sane_Sea',
+            events: 'Math Puzzles'
+        },
+        {
+            player: 'Alejandro The Awesome',
+            events: 'Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Gimli the Dorf',
+            events: 'Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Joshua',
+            events: 'HTML/CSS, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: 'Orange leaf',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'LJG911',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'SuperRyan',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, Chess'
+        },
+        {
+            player: 'ᵀʰᵉ ᴵᶰᶠᶤᶰᶤᵗᵉˢᶤᵐᵃˡ',
+            events: 'Math Puzzles, Chess'
+        },
+        {
+            player: 'JoeTheObjectPup',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Aaron Leong',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Chess'
+        },
+        {
+            player: 'The #1 Triangle Proponent',
+            events: 'JS (Drawing), Math Puzzles, Chess'
+        },
+        {
+            player: 'B.K.',
+            events: 'HTML/CSS'
+        },
+        {
+            player: 'white.strawberry',
+            events: 'JS (Drawing), Math Puzzles, Chess'
+        },
+        {
+            player: 'Noel Negash',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, Chess'
+        },
+        {
+            player: 'XSwerbensky',
+            events: 'JS (Object Oriented Design), HTML/CSS, SQL, Math Puzzles, Energy Point Race, Chess, Typing'
+        },
     ],
-    /** TGreenL **/
+    
+    /** Green */
     [
-        "WillTheProgrammer - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race",
-        "The #1 Planet Proponent - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race",
-        "FunkyChicken - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "Illusionist - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles",
-        "Mino the Programmer - Math Puzzles",
-        "Victym - JS (Drawing), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
-        "PlatformerKing - JS (Drawing), JS (Animation)",
-        "Cross - Math Puzzles, EP Race, Typing",
-        "Starky Programming - JS (Drawing), JS (Animation)",
-        "SneakyNugget - JS (Drawing), Chess",
-        "torNATO - JS (Drawing), JS (Anaimation), Chess",
-        "Ninja Studios - JS (Drawing), HTML/CSS",
-        "jacob harrison - Chess",
-        "Spiral Studios - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "rhymescheme - JS (Animation), HTML/CSS, Chess",
-        "Frustrated Programmer - JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race",
-        "FWSGaming - EP Race",
-        "Antoine Levesque - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess, Typing",
-        "5ˆ₁4¡ - JS (Drawing), HTML/CSS, SQL",
-        "Thephantomprogrammer - JS (Drawing), JS (Animation), JS (Object Oriented Design), EP Race, Chess",
-        "Lava Studios - JS (Drawing)",
-        "DigitalDragon - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "Benedict Bosch - JS (Object Oriented Design), Math Puzzles, Chess",
-        "William D. - Chess",
-        "Scorpion - JS (Drawing), HTML/CSS, Math Puzzles",
-        "PycoPixel - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, Chess",
-        "Dipper - JS (Drawing), JS (Animation), Math Puzzles, Chess",
-        "Captain Leo - JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles",
-        "Jacob - JS (Drawing), HTML/CSS, Chess",
-        "Mohammed - HTML/CSS, HTML/CSS/JS/jQuery",
-        "murray1 - JS (Drawing), Chess",
-        ". - Math Puzzles, EP Race, Typing",
-        "dynamic - JS (Object Oriented Design), HTML/CSS, Chess",
-        "Fire - JS (Animation), HTML/CSS, Math Puzzles, Chess",
-        "Dipper - JS (Drawing), JS (Animation), Math Puzzles, EP Race, Typing",
-        "Reborn - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
+        {
+            player: 'WillTheProgrammer',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race'
+        },
+        {
+            player: 'The #1 Planet Proponent',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race'
+        },
+        {
+            player: 'FunkyChicken',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Illusionist',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles'
+        },
+        {
+            player: 'Mino the Programmer',
+            events: 'Math Puzzles'
+        },
+        {
+            player: 'Victym',
+            events: 'JS (Drawing), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        },
+        {
+            player: 'PlatformerKing',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'Cross',
+            events: 'Math Puzzles, EP Race, Typing'
+        },
+        {
+            player: 'Starky Programming',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'SneakyNugget',
+            events: 'JS (Drawing), Chess'
+        },
+        {
+            player: 'torNATO',
+            events: 'JS (Drawing), JS (Anaimation), Chess'
+        },
+        {
+            player: 'Ninja Studios',
+            events: 'JS (Drawing), HTML/CSS'
+        },
+        {
+            player: 'jacob harrison',
+            events: 'Chess'
+        },
+        {
+            player: 'Spiral Studios',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'rhymescheme',
+            events: 'JS (Animation), HTML/CSS, Chess'
+        },
+        {
+            player: 'Frustrated Programmer',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race'
+        },
+        {
+            player: 'FWSGaming',
+            events: 'EP Race'
+        },
+        {
+            player: 'Antoine Levesque',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: '5ˆ₁4¡',
+            events: 'JS (Drawing), HTML/CSS, SQL'
+        },
+        {
+            player: 'Thephantomprogrammer',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), EP Race, Chess'
+        },
+        {
+            player: 'Lava Studios',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'DigitalDragon',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'Benedict Bosch',
+            events: 'JS (Object Oriented Design), Math Puzzles, Chess'
+        },
+        {
+            player: 'William D.',
+            events: 'Chess'
+        },
+        {
+            player: 'Scorpion',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles'
+        },
+        {
+            player: 'PycoPixel',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, Chess'
+        },
+        {
+            player: 'Dipper',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, Chess'
+        },
+        {
+            player: 'Captain Leo',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles'
+        },
+        {
+            player: 'Jacob',
+            events: 'JS (Drawing), HTML/CSS, Chess'
+        },
+        {
+            player: 'Mohammed',
+            events: 'HTML/CSS, HTML/CSS/JS/jQuery'
+        },
+        {
+            player: 'murray1',
+            events: 'JS (Drawing), Chess'
+        },
+        {
+            player: '.',
+            events: 'Math Puzzles, EP Race, Typing'
+        },
+        {
+            player: 'dynamic',
+            events: 'JS (Object Oriented Design), HTML/CSS, Chess'
+        },
+        {
+            player: 'Fire',
+            events: 'JS (Animation), HTML/CSS, Math Puzzles, Chess'
+        },
+        {
+            player: 'Dipper',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race, Typing'
+        },
     ],
-    /** TGreyL **/
+    
+    /** Grey */
     [
-        "Edward - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
-        "Chester Banks - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Typing",
-        "Silver Cat - Math Puzzles, Chess",
-        "CodingChamp01 - JS (Animation), Math Puzzles",
-        "Fire Glider - JS (Drawing), Math Puzzles, Chess",
-        "Banana - JS (Drawing), EP Race",
-        "opabinia2401 - JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "Daisy - JS (Drawing)",
-        "Ranger Studios - JS (Drawing), JS (Animation), Math Puzzles",
-        "Mitrue - JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race",
-        "Vader2003 - JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess",
-        "Jonathan - JS (Animation)",
-        "The Inferno Code - JS (Object Oriented Design)",
-        "Tanyut Sharma - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "Katelyn - Math Puzzles, EP Race, Chess",
-        "Erno - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Chess, Typing",
-        "DJS Studios - JS (Drawing), JS (Animation), Chess",
-        "Ethan Ball - JS (Drawing), JS (Animation), Math Puzzles, EP Race",
-        "SilverWisp - JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess",
-        "Garrison - Chess",
-        "Torch 13 - JS (Drawing), HTML/CSS, Math Puzzles, Chess",
-        "Bluejay - JS (Drawing), EP Race",
-        "ThePlanetCoder - JS (Drawing)",
-        "Academic Ninja - JS (Drawing), JS (Animation), Math Puzzles, Chess",
-        "CodeEnthusiast - JS (Animation), JS (Object Oriented Design), Math Puzzles",
-        "FroYo - JS (Drawing), JS (Object Oriented Design), EP Race, Typing",
-        "PandaProgrammer - JS (Drawing)",
-        "CarverBoldman - JS (Drawing), Chess",
-        "panda2003 - Math Puzzles, EP Race",
-        "thpie22 - JS (Drawing), Math Puzzles, EP Race, Chess",
-        "codemaster - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "InkytheOctopus - JS (Drawing), JS (Animation), Math Puzzles, EP Race",
-        "Moody Guy - JS (Drawing), JS (Animation)",
-        "Awesomecookie1000 - JS (Drawing), JS (Object Oriented Design), SQL",
-        "Yousuf Sharif Ahmed - JS (Drawing), HTML/CSS, Energy Point Race, Chess, Typing",
+        {
+            player: 'Edward',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        },
+        {
+            player: 'Chester Banks',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Typing'
+        },
+        {
+            player: 'Silver Cat',
+            events: 'Math Puzzles, Chess'
+        },
+        {
+            player: 'CodingChamp01',
+            events: 'JS (Animation), Math Puzzles'
+        },
+        {
+            player: 'Fire Glider',
+            events: 'JS (Drawing), Math Puzzles, Chess'
+        },
+        {
+            player: 'Banana',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'opabinia2401',
+            events: 'JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Daisy',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Ranger Studios',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles'
+        },
+        {
+            player: 'Mitrue',
+            events: 'JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race'
+        },
+        {
+            player: 'Vader2003',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Jonathan',
+            events: 'JS (Animation)'
+        },
+        {
+            player: 'The Inferno Code',
+            events: 'JS (Object Oriented Design)'
+        },
+        {
+            player: 'Tanyut Sharma',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Katelyn',
+            events: 'Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Erno',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Chess, Typing'
+        },
+        {
+            player: 'DJS Studios',
+            events: 'JS (Drawing), JS (Animation), Chess'
+        },
+        {
+            player: 'Ethan Ball',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race'
+        },
+        {
+            player: 'SilverWisp',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Garrison',
+            events: 'Chess'
+        },
+        {
+            player: 'Torch 13',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, Chess'
+        },
+        {
+            player: 'Bluejay',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'ThePlanetCoder',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Academic Ninja',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, Chess'
+        },
+        {
+            player: 'CodeEnthusiast',
+            events: 'JS (Animation), JS (Object Oriented Design), Math Puzzles'
+        },
+        {
+            player: 'FroYo',
+            events: 'JS (Drawing), JS (Object Oriented Design), EP Race, Typing'
+        },
+        {
+            player: 'PandaProgrammer',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'CarverBoldman',
+            events: 'JS (Drawing), Chess'
+        },
+        {
+            player: 'panda2003',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'thpie22',
+            events: 'JS (Drawing), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'codemaster',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'InkytheOctopus',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race'
+        },
+        {
+            player: 'Moody Guy',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'Awesomecookie1000',
+            events: 'JS (Drawing), JS (Object Oriented Design), SQL'
+        },
+        {
+            player: 'Yousuf Sharif Ahmed',
+            events: 'JS (Drawing), HTML/CSS, Energy Point Race, Chess, Typing'
+        },
     ],
-    /** TRL **/
+    
+    /** Red */
     [
-        "FowlerProgramming - JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
-        "Hopper Is Me - JS (Drawing), EP Race, Typing",
-        "Arnakt Fen - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, Chess",
-        "DevinDumont - JS (Drawing), HTML/CSS, Chess",
-        "Legolas Greenleaf - JS (Drawing), JS (Animation), Typing",
-        "~PixelQueen~ - JS (Drawing), EP Race",
-        "Kruxe - JS (Drawing), EP Race",
-        "Golden Zachary - JS (Drawing), Math Puzzles, EP Race",
-        "rebeccahunag2000 - EP Race",
-        "Shadow Runner - JS (Drawing), JS (Animation), HTML/CSS, SQL, Chess, Typing",
-        "NGurl - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, SQL, Typing",
-        "AquaOrchid - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Chess",
-        "Pithon - Chess",
-        "AlexT - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles",
-        "Laurette Kruger - JS (Drawing), JS (Animation), HTML/CSS, EP Race",
-        "austynbair - Chess",
-        "Crimson - JS (Drawing), HTML/CSS, EP Race",
-        "Sunny!!! - JS (Drawing), JS (Object Oriented Design), Math Puzzles, EP Race",
-        "Ben Hudson - JS (Animation), JS (Object Oriented Design), SQL, Math Puzzles, Chess",
-        "Spenserroger1 - Math Puzzles, Chesss",
-        "Jett Burns - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess,",
-        "o~---||[})(10204542)({]||>---~o - JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race, Chess, Typing",
-        "Happy Snowman - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess, Typing",
-        "ryanrohit - JS (Drawing)",
-        "eliana5197 - JS (Drawing), Math Puzzles",
-        "pointbazaar - JS (Drawing), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race",
-        "Peculate - HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess",
-        "Percy383 - JS (Drawing), HTML/CSS, Math Puzzles, EP Race, Chess",
-        "Anna14Love - Math Puzzles, EP Race",
-        "Ben Rivers - JS (Drawing), JS (Animation)",
-        "Targmann - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Chess",
-        "OutcastOfficial - JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race, Chess",
-        "Lava Loom - Math Puzzles",
-        "Anonymous - Math Puzzles, EP Race",
-        "code-challenger - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, SQL, Math Puzzles"
+        {
+            player: 'FowlerProgramming',
+            events: 'JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        },
+        {
+            player: 'Hopper Is Me',
+            events: 'JS (Drawing), EP Race, Typing'
+        },
+        {
+            player: 'Arnakt Fen',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, Chess'
+        },
+        {
+            player: 'DevinDumont',
+            events: 'JS (Drawing), HTML/CSS, Chess'
+        },
+        {
+            player: 'Legolas Greenleaf',
+            events: 'JS (Drawing), JS (Animation), Typing'
+        },
+        {
+            player: '~PixelQueen~',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'Kruxe',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'Golden Zachary',
+            events: 'JS (Drawing), Math Puzzles, EP Race'
+        },
+        {
+            player: 'rebeccahunag2000',
+            events: 'EP Race'
+        },
+        {
+            player: 'Shadow Runner',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, SQL, Chess, Typing'
+        },
+        {
+            player: 'NGurl',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, SQL, Typing'
+        },
+        {
+            player: 'AquaOrchid',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Chess'
+        },
+        {
+            player: 'Pithon',
+            events: 'Chess'
+        },
+        {
+            player: 'AlexT',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles'
+        },
+        {
+            player: 'Laurette Kruger',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, EP Race'
+        },
+        {
+            player: 'austynbair',
+            events: 'Chess'
+        },
+        {
+            player: 'Crimson',
+            events: 'JS (Drawing), HTML/CSS, EP Race'
+        },
+        {
+            player: 'Sunny!!!',
+            events: 'JS (Drawing), JS (Object Oriented Design), Math Puzzles, EP Race'
+        },
+        {
+            player: 'Ben Hudson',
+            events: 'JS (Animation), JS (Object Oriented Design), SQL, Math Puzzles, Chess'
+        },
+        {
+            player: 'Spenserroger1',
+            events: 'Math Puzzles, Chesss'
+        },
+        {
+            player: 'Jett Burns',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess,'
+        },
+        {
+            player: 'o~---||[})(10204542)({]||>---~o',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: 'Happy Snowman',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: 'ryanrohit',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'eliana5197',
+            events: 'JS (Drawing), Math Puzzles'
+        },
+        {
+            player: 'pointbazaar',
+            events: 'JS (Drawing), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race'
+        },
+        {
+            player: 'Peculate',
+            events: 'HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Percy383',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Anna14Love',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'Ben Rivers',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'Targmann',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Chess'
+        },
+        {
+            player: 'OutcastOfficial',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Lava Loom',
+            events: 'Math Puzzles'
+        },
+        {
+            player: 'Anonymous',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'code-challenger',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, SQL, Math Puzzles'
+        },
     ],
-    /** TYL **/
+    
+    /** Yellow */
     [
-        "cheese33 - JS (Animation), Math Puzzles",
-        "Mr. Animate - JS (Drawing), JS (Animation), HTML/CSS, EP Race",
-        "The_LEGO_Nerd - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Chess, Typing",
-        "JPiratesBaseball - Math Puzzles, EP Race, Chess",
-        "MatthewX - JS (Drawing), HTML/CSS",
-        "SlingBlade - JS (Object Oriented Design)",
-        "Watermelon Tourmaline - JS (Drawing), JS (Animation), Chess",
-        "Pumpkinator - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
-        "Tazal - JS (Drawing), JS (Animation, JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess",
-        "jonathanwilliams513 - JS (Drawing), Chess",
-        "DragonPharoah - EP Race, Chess",
-        "Captain - JS (Drawing), JS (Animation)",
-        "TheArchDuke - JS (Drawing), JS (Animation)",
-        "Akbaba - JS (Drawing), JS (Animation), EP Race",
-        "mustang girl - EP Race",
-        "Lünee - JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess",
-        "Eagle77 - JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, Chess",
-        "Catboy - JS (Drawing)",
-        "seann6556 - Math Puzzles, Chess",
-        "TectonicHorizon - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery",
-        "Jordan - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "Panther Programming - JS (Drawing), JS (Animation), EP Race",
-        "a.sonnadjoshi - Math Puzzles, Chess, Typing",
-        "Swordtail Productions - JS (Drawing)",
-        "DavidPickering - JS (Drawing), Chess",
-        "Wild West - JS (Drawing)",
-        "Varun Kute - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess",
-        "ColorMaster - Math Puzzles, EP Race",
-        "Inferno fire - JS (Drawing), EP Race",
-        "LJD911 - JS (Drawing)",
-        "Jared Emmanuel - JS (Drawing)",
-        "Orange Juice Programmer - JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, Chess",
-        "Programming Robot - Math Puzzles, EP Race",
-        "Python Programming - JS (Drawing)",
-        "LoganWeisberg - JS (Drawing), JS (Animation), Math Puzzles, Energy Point Race, Chess, Typing",
-        "Let'sHopper - SQL"
+        {
+            player: 'cheese33',
+            events: 'JS (Animation), Math Puzzles'
+        },
+        {
+            player: 'Mr. Animate',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, EP Race'
+        },
+        {
+            player: 'The_LEGO_Nerd',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Chess, Typing'
+        },
+        {
+            player: 'JPiratesBaseball',
+            events: 'Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'MatthewX',
+            events: 'JS (Drawing), HTML/CSS'
+        },
+        {
+            player: 'SlingBlade',
+            events: 'JS (Object Oriented Design)'
+        },
+        {
+            player: 'Watermelon Tourmaline',
+            events: 'JS (Drawing), JS (Animation), Chess'
+        },
+        {
+            player: 'Pumpkinator',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        },
+        {
+            player: 'Tazal',
+            events: 'JS (Drawing), JS (Animation, JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'jonathanwilliams513',
+            events: 'JS (Drawing), Chess'
+        },
+        {
+            player: 'DragonPharoah',
+            events: 'EP Race, Chess'
+        },
+        {
+            player: 'Captain',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'TheArchDuke',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'Akbaba',
+            events: 'JS (Drawing), JS (Animation), EP Race'
+        },
+        {
+            player: 'mustang girl',
+            events: 'EP Race'
+        },
+        {
+            player: 'Lünee',
+            events: 'JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Eagle77',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS, Math Puzzles, Chess'
+        },
+        {
+            player: 'Catboy',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'seann6556',
+            events: 'Math Puzzles, Chess'
+        },
+        {
+            player: 'TectonicHorizon',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery'
+        },
+        {
+            player: 'Jordan',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'Panther Programming',
+            events: 'JS (Drawing), JS (Animation), EP Race'
+        },
+        {
+            player: 'a.sonnadjoshi',
+            events: 'Math Puzzles, Chess, Typing'
+        },
+        {
+            player: 'Swordtail Productions',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'DavidPickering',
+            events: 'JS (Drawing), Chess'
+        },
+        {
+            player: 'Wild West',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Varun Kute',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'ColorMaster',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'Inferno fire',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'LJD911',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Jared Emmanuel',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Orange Juice Programmer',
+            events: 'JS (Drawing), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, Chess'
+        },
+        {
+            player: 'Programming Robot',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'Python Programming',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'LoganWeisberg',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, Energy Point Race, Chess, Typing'
+        },
     ],
-    /** TPL **/
+    
+    /** Purple */
     [
-        "Duskpin Ultimate - JS (Animation), JS (Object Oriented Design)",
-        "Alex Martin - JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race, Chess",
-        "Quantum - SQL, Math Puzzles, EP Race, Chess, Typing",
-        "ANC - HTML/CSS, HTML/CSS/JS/jQuery",
-        "avmswimmer - JS (Drawing), JS (Animation), EP Race, Chess",
-        "Silly Clown - JS (Drawing)","Infinity - JS (Drawing), HTML/CSS, SQL",
-        "Paradox Void - JS (Drawing), Chess, Typing",
-        "Breck Nave - JS (Aniamtion), JS (Object Oriented Design), Chess",
-        "whitelight - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess",
-        "Sam Hill - JS (Animation), HTML/CSS",
-        "lark - EP Race",
-        "da phantom chocolate - JS (Drawing), JS (Animation)",
-        "JaketheSnake1571 - JS (Animation), EP Race, Chess",
-        "Lexicon - JS (Drawing), Math Puzzles, EP Race, Typing",
-        "Panzerkampfwagen - EP Race",
-        "LNY - JS (Drawing), JS (Animation), Math Puzzles, Typing",
-        "Packfan Pro - JS (Drawing), SQL",
-        "Doctor137 - JS (Drawing), JS (Animation), JS (Object Oriented Design), SQL, Math Puzzles, EP Race",
-        "SmartCookie - JS (Drawing), HTML/CSS, EP Race",
-        "mloges - JS (Object Oriented Design), HTML/CSS/JS/jQuery",
-        "DaphneThorpe - JS (Drawing), JS (Animation), HTML/CSS",
-        "#2 Joke Proponent - JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess",
-        "High Queen Susan - JS (Drawing), EP Race",
-        "properprogrammer11 - JS (Drawing)",
-        "Leanora - JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess",
-        "carol tran - JS (Drawing)",
-        "Orange Programmer - JS (Drawing), HTML/CSS, Math Puzzles, EP Race",
-        "airplane45w3 - Chess",
-        "Noah - JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Typing",
-        "SharkFin - JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
-        "mrfrodo18 - Math Puzzles, EP Race, Chess",
-        "Purvi Koringa - Math Puzzles, EP Race",
-        "Aqil - JS (Drawing), JS (Animation), JS (Object Oriented Design)",
-        "Blaze - JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles",
+        {
+	        player: 'Duskpin Ultimate',
+	        events: 'JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+	        player: 'Alex Martin',
+	        events: 'JS (Animation), JS (Object Oriented Design), HTML/CSS, EP Race, Chess'
+        },
+        {
+            player: 'Quantum',
+            events: 'SQL, Math Puzzles, EP Race, Chess, Typing'
+        },
+        {
+            player: 'ANC',
+            events: 'HTML/CSS, HTML/CSS/JS/jQuery'
+        },
+        {
+            player: 'avmswimmer',
+            events: 'JS (Drawing), JS (Animation), EP Race, Chess'
+        },
+        {
+            player: 'Silly Clown',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Infinity',
+            events: 'JS (Drawing), HTML/CSS, SQL'
+        },
+        {
+            player: 'Paradox Void',
+            events: 'JS (Drawing), Chess, Typing'
+        },
+        {
+            player: 'Breck Nave',
+            events: 'JS (Aniamtion), JS (Object Oriented Design), Chess'
+        },
+        {
+            player: 'whitelight',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Sam Hill',
+            events: 'JS (Animation), HTML/CSS'
+        },
+        {
+            player: 'lark',
+            events: 'EP Race'
+        },
+        {
+            player: 'da phantom chocolate',
+            events: 'JS (Drawing), JS (Animation)'
+        },
+        {
+            player: 'JaketheSnake1571',
+            events: 'JS (Animation), EP Race, Chess'
+        },
+        {
+            player: 'Lexicon',
+            events: 'JS (Drawing), Math Puzzles, EP Race, Typing'
+        },
+        {
+            player: 'Panzerkampfwagen',
+            events: 'EP Race'
+        },
+        {
+            player: 'LNY',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, Typing'
+        },
+        {
+            player: 'Packfan Pro',
+            events: 'JS (Drawing), SQL'
+        },
+        {
+            player: 'Doctor137',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), SQL, Math Puzzles, EP Race'
+        },
+        {
+            player: 'SmartCookie',
+            events: 'JS (Drawing), HTML/CSS, EP Race'
+        },
+        {
+            player: 'mloges',
+            events: 'JS (Object Oriented Design), HTML/CSS/JS/jQuery'
+        },
+        {
+            player: 'DaphneThorpe',
+            events: 'JS (Drawing), JS (Animation), HTML/CSS'
+        },
+        {
+            player: '#2 Joke Proponent',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'High Queen Susan',
+            events: 'JS (Drawing), EP Race'
+        },
+        {
+            player: 'properprogrammer11',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Leanora',
+            events: 'JS (Drawing), JS (Animation), Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'carol tran',
+            events: 'JS (Drawing)'
+        },
+        {
+            player: 'Orange Programmer',
+            events: 'JS (Drawing), HTML/CSS, Math Puzzles, EP Race'
+        },
+        {
+            player: 'airplane45w3',
+            events: 'Chess'
+        },
+        {
+            player: 'Noah',
+            events: 'JS (Animation), JS (Object Oriented Design), HTML/CSS, Math Puzzles, Typing'
+        },
+        {
+            player: 'SharkFin',
+            events: 'JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        },
+        {
+            player: 'mrfrodo18',
+            events: 'Math Puzzles, EP Race, Chess'
+        },
+        {
+            player: 'Purvi Koringa',
+            events: 'Math Puzzles, EP Race'
+        },
+        {
+            player: 'Aqil',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design)'
+        },
+        {
+            player: 'Blaze',
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, Math Puzzles'
+        }
     ]
 ];
 
@@ -242,6 +877,7 @@ const commands = [
         "Uptime : Returns time bot has been online.",
         "Hello : Says hello back.",
         "Ping : Returns 'pong'.", 
+        "Info <competitor> : Returns info about a KAO competitor.",
     ]
 ];
 
@@ -301,7 +937,7 @@ client.on('message', message => {
     var command = message.content.split(" ")[0];
     command = command.slice('$'.length).toLowerCase();
 
-    var args = message.content.split(" ").slice(1);
+    var args = message.content.split(" ")[0].slice(1);
 
 
     if (command === 'ping') {
@@ -321,12 +957,20 @@ client.on('message', message => {
     } else
     
     
-    if (command === 'player') {
-        if (args[0] === 'Jett' || args[0] === 'Jett Burns') {
-            let embed = new Discord.RichEmbed(); 
-            embed.setColor("#963c69");
-            embed.addField(args[0], 'Jett\'s events');
-            message.channel.sendEmbed(embed);
+    if (command === 'info') {
+        let embed = new Discord.RichEmbed(); 
+        embed.setColor("#963c69");
+        
+        message.channel.sendMessage(args);
+        
+        // Loops through `olympians`, checking for a match with the argument.
+        for (var i = 0; i < olympians.length; i++) {
+            for (var j = 0; j < olympians[0].length; j++) {
+                if (olympians[i][j].player === args[0]) {
+                    embed.addField(args[0] + "'s Info", "**" + args[0] + "'s** events are:\n```" + olympians[i][j].events + "```");
+                    message.channel.sendEmbed(embed);
+                }
+            }
         }
     }
     
