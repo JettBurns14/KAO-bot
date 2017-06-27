@@ -937,7 +937,7 @@ client.on('message', message => {
     var command = message.content.split(" ")[0];
     command = command.slice('$'.length).toLowerCase();
 
-    var args = message.content.split(" ")[1].slice(1);
+    var args = message.content.split(" ")[1];
 
 
     if (command === 'ping') {
