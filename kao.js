@@ -299,7 +299,7 @@ client.on('message', message => {
     if (message.author.bot) return;
 
     var command = message.content.split(" ")[0];
-    command = command.slice(config.prefix.length).toLowerCase();
+    command = command.slice('$'.length).toLowerCase();
 
     var args = message.content.split(" ").slice(1);
 
