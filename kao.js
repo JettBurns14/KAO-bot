@@ -961,13 +961,13 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed(); 
         embed.setColor("#963c69");
         
-        message.channel.sendMessage(args);
+        //message.channel.sendMessage(args);
         
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
             for (var j = 0; j < olympians[0].length; j++) {
-                if (olympians[i][j].player === args[0]) {
-                    embed.addField(args[0] + "'s Info", "**" + args[0] + "'s** events are:\n```" + olympians[i][j].events + "```");
+                if (olympians[i][j].player === args) {
+                    embed.addField(args + "'s Info", "**" + args + "'s** events are:\n```" + olympians[i][j].events + "```");
                     message.channel.sendEmbed(embed);
                 }
             }
