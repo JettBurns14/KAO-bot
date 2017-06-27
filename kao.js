@@ -519,7 +519,7 @@ const olympians = [
             events: 'Math Puzzles, Chesss'
         },
         {
-            player: 'Jett Burns',
+            player: 'Jett Burns' || 'Jett',
             events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess,'
         },
         {
@@ -966,7 +966,7 @@ client.on('message', message => {
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
             for (var j = 0; j < olympians[0].length; j++) {
-                if (olympians[i][j].player === args) {
+                if (olympians[i][j].player === args || olympians[i][j].player.toLowerCase() === args) {
                     embed.addField(args + "'s Info", "**" + args + "'s** events are:\n```" + olympians[i][j].events + "```");
                     message.channel.sendEmbed(embed);
                 }
