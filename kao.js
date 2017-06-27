@@ -913,7 +913,7 @@ var greetings = [
 
 client.on('ready', () => {
     client.user.setGame('$help');
-    client.user.setUsername('KhanBot');
+    client.user.setUsername('KAO bot');
     console.log('I am ready Jett!');
     
     setInterval(function() {
@@ -937,7 +937,7 @@ client.on('message', message => {
     var command = message.content.split(" ")[0];
     command = command.slice('$'.length).toLowerCase();
 
-    var args = message.content.split(" ")[0].slice(1);
+    var args = message.content.split(" ")[1].slice(1);
 
 
     if (command === 'ping') {
