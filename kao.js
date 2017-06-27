@@ -520,7 +520,7 @@ const olympians = [
         },
         {
             player: 'Jett Burns' || 'Jett',
-            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess,'
+            events: 'JS (Drawing), JS (Animation), JS (Object Oriented Design), HTML/CSS, HTML/CSS/JS/jQuery, SQL, Math Puzzles, EP Race, Chess'
         },
         {
             player: 'o~---||[})(10204542)({]||>---~o',
@@ -911,6 +911,15 @@ var greetings = [
     "Yo, wus up",
 ];
 
+var colors = [
+	'#3257fc', // Blue
+	'#3bd918', // Green
+	'#aeb2c2', // grey
+	'#fa3257', // Red
+	'#faed32', // Yellow
+	'#9d32fa'  // Purple
+];
+
 client.on('ready', () => {
     client.user.setGame('$help');
     client.user.setUsername('KAO bot');
@@ -958,16 +967,17 @@ client.on('message', message => {
     
     
     if (command === 'info') {
-        let embed = new Discord.RichEmbed(); 
-        embed.setColor("#963c69");
+        let embed = new Discord.RichEmbed();
         
         //message.channel.sendMessage(args);
         
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
             for (var j = 0; j < olympians[0].length; j++) {
-                if (olympians[i][j].player === args || olympians[i][j].player.toLowerCase() === args) {
-                    embed.addField(args + "'s Info", "**" + args + "'s** events are:\n```" + olympians[i][j].events + "```");
+				var current = olympians[i][j].player;
+                if (current === args || current.toLowerCase() === args) {
+        			embed.setColor(colors[i]);
+                    embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + olympians[i][j].events + "```");
                     message.channel.sendEmbed(embed);
                 }
             }
