@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-const olympians;
+var olympians;
 
 const commands = [
     // Random
@@ -79,7 +79,7 @@ client.on('ready', () => {
         }
         client.user.setStatus(status[statusNum]);
     }, 2000);
-	
+
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
 		olympians = (JSON.parse(body).revision.code);
 	});
