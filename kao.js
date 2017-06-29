@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-const olympians = [];
+const olympians;
 
 const commands = [
     // Random
@@ -81,7 +81,7 @@ client.on('ready', () => {
     }, 2000);
 	
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
-		console.log(JSON.parse(body).revision.code);
+		olympians = (JSON.parse(body).revision.code);
 	});
 });
 
@@ -128,6 +128,9 @@ client.on('message', message => {
             }
         }
     }
+	
+	if (command === 'test') {
+		message.channel.sendMessage(olympians);
     
     else {
         let embed = new Discord.RichEmbed();
