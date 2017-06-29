@@ -131,6 +131,7 @@ client.on('message', message => {
 	
 	if (command === 'test') {
 		message.channel.sendMessage(olympians);
+	}
     
     else {
         let embed = new Discord.RichEmbed();
