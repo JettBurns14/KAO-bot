@@ -118,6 +118,7 @@ client.on('message', message => {
         
 		message.channel.sendMessage(Object.keys(olympians).length + ', ' + olympians.TRedL.length)
         // Loops through `olympians`, checking for a match with the argument.
+		/*
         for (var i = 0; i < olympians.length; i++) {
             for (var j = 0; j < olympians.TRedL.length; j++) {
 				var current = olympians[i][j].player;
@@ -127,7 +128,7 @@ client.on('message', message => {
 					message.channel.sendEmbed(embed);
                 }
             }
-        }
+        }*/
     }
     
     else {
