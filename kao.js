@@ -116,7 +116,8 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage(Object.keys(olympians).length)
+	//message.channel.sendMessage(Object.keys(olympians).length)
+	    message.channel.sendMessage('WIP');
         // Loops through `olympians`, checking for a match with the argument.
 		/*
         for (var i = 0; i < olympians.length; i++) {
