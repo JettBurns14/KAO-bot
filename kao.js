@@ -116,7 +116,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage(olympians.length + ', ' + olympians.TRedL.length)
+		message.channel.sendMessage(Object.keys(olympians).length + ', ' + olympians.TRedL.length)
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
             for (var j = 0; j < olympians.TRedL.length; j++) {
