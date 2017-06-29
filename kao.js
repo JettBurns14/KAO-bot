@@ -1,10 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-
-
 const olympians = [];
-
 
 const commands = [
     // Random
@@ -16,6 +13,16 @@ const commands = [
         "Info <competitor> : Returns info about a KAO competitor.",
     ]
 ];
+
+var getKAData = function(message, api, user, callback) {
+    request(api + user, function(error, response, body) {
+        if (!JSON.parse(body)) {
+            message.channel.sendMessage('Error with a **`getKAData`** request.');
+            return;
+        }
+        callback(body);
+    });
+};
 
 var millisToTime = function(milliseconds) {
     let x = milliseconds / 1000;
@@ -72,6 +79,10 @@ client.on('ready', () => {
         }
         client.user.setStatus(status[statusNum]);
     }, 2000);
+	
+	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
+		console.log(JSON.parse(body).revision.code);
+	}
 });
 
 client.on('message', message => {
@@ -104,8 +115,6 @@ client.on('message', message => {
     
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
-        
-        //message.channel.sendMessage(args);
         
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
