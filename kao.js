@@ -116,9 +116,10 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
+		message.channel.sendMessage(olympians.length + ', ' + olympians.TRedL.length)
         // Loops through `olympians`, checking for a match with the argument.
         for (var i = 0; i < olympians.length; i++) {
-            for (var j = 0; j < olympians[0].length; j++) {
+            for (var j = 0; j < olympians.TRedL.length; j++) {
 				var current = olympians[i][j].player;
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
@@ -128,10 +129,6 @@ client.on('message', message => {
             }
         }
     }
-	
-	if (command === 'test') {
-		message.channel.sendMessage(olympians);
-	}
     
     else {
         let embed = new Discord.RichEmbed();
