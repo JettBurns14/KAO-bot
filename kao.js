@@ -82,7 +82,7 @@ client.on('ready', () => {
 	
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
 		console.log(JSON.parse(body).revision.code);
-	}
+	});
 });
 
 client.on('message', message => {
