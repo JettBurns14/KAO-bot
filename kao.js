@@ -67,18 +67,6 @@ client.on('ready', () => {
     client.user.setGame('$help');
     client.user.setUsername('KAO bot');
     console.log('I am ready Jett!');
-    
-    setInterval(function() {
-        totalTime++;
-    }, 1);
-    setInterval(function() {
-        if (statusNum > 2) {
-            statusNum = 0;
-        } else {
-            statusNum++;
-        }
-        client.user.setStatus(status[statusNum]);
-    }, 2000);
 
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
 		olympians = (JSON.parse(body).revision.code);
@@ -116,8 +104,8 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-	//message.channel.sendMessage(Object.keys(olympians).length)
-	    message.channel.sendMessage('WIP');
+		message.channel.sendMessage(Object.values(olympians.TRedL))
+		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
         for (var i = 0; i < olympians.length; i++) {
