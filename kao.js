@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-var olympians = new Object();
+var olympians;
 
 const commands = [
     // Random
@@ -69,7 +69,7 @@ client.on('ready', () => {
     console.log('I am ready Jett!');
 
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
-		olympians.teams = (JSON.parse(body).revision.code);
+		olympians = (JSON.parse(body).revision.code);
 	});
 });
 
@@ -104,7 +104,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		console.log(olympians.teams)
+		console.log(Object.keys(olympians))
 		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
