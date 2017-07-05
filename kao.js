@@ -70,8 +70,8 @@ client.on('ready', () => {
     console.log('I am ready Jett!');
 
     setInterval(function() {
-        totalTime += 1;
-    }, 1000);
+        totalTime++;
+    }, 1);
     request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
         olympians = JSON.parse(body).revision.code;
     });
