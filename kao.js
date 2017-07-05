@@ -104,7 +104,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage('Olympians length = ' + JSON.parse(olympians).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
+		message.channel.sendMessage('Olympians length = ' + Object.keys(JSON.parse(olympians)).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
 		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
