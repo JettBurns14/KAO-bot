@@ -110,10 +110,10 @@ client.on('message', message => {
 		
         for (var i = 0; i < Object.keys(JSON.parse(olympians)).length; i++) {
             for (var j = 0; j < JSON.parse(olympians).TRedL.length; j++) {
-				var current = JSON.parse(olympians)[i][j].player;
+				var current = JSON.parse(olympians[i][j]).player;
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
-					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + olympians[i][j].events + "```");
+					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + JSON.parse(olympians[i][j]).events + "```");
 					message.channel.sendEmbed(embed);
                 }
             }
