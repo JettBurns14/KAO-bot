@@ -104,20 +104,20 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage('Olympians length = ' + Object.keys(JSON.parse(olympians)).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
+		//message.channel.sendMessage('Olympians length = ' + Object.keys(JSON.parse(olympians)).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
 		
         // Loops through `olympians`, checking for a match with the argument.
-		/*
-        for (var i = 0; i < olympians.length; i++) {
-            for (var j = 0; j < olympians.TRedL.length; j++) {
-				var current = olympians[i][j].player;
+		
+        for (var i = 0; i < Object.keys(JSON.parse(olympians)).length; i++) {
+            for (var j = 0; j < JSON.parse(olympians).TRedL.length; j++) {
+				var current = JSON.parse(olympians)[i][j].player;
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
 					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + olympians[i][j].events + "```");
 					message.channel.sendEmbed(embed);
                 }
             }
-        }*/
+        }
     }
     
     else {
