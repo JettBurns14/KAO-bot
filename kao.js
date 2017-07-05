@@ -69,7 +69,7 @@ client.on('ready', () => {
     console.log('I am ready Jett!');
 
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
-		olympians = JSON.parse(body.revision.code);
+		olympians = JSON.parse(body).revision.code;
 	});
 });
 
@@ -103,18 +103,18 @@ client.on('message', message => {
     
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
-        
+        let json = JSON.parse(olympians);
 		//message.channel.sendMessage('Olympians length = ' + Object.keys(JSON.parse(olympians)).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
 		
         // Loops through `olympians`, checking for a match with the argument.
 		
-        for (var i = 0; i < Object.keys(olympians).length; i++) {
-            for (var j = 0; j < olympians.TRedL.length; j++) {
-				var current = olympians[Object.keys(olympians)[i]][j].player;
+        for (var i = 0; i < Object.keys(json).length; i++) {
+            for (var j = 0; j < json.TRedL.length; j++) {
+				var current = json[Object.keys(json)[i]][j].player;
 				
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
-					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + olympians[Object.keys(olympians)[i]][j].events + "```");
+					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + json[Object.keys(json)[i]][j].events + "```");
 					message.channel.sendEmbed(embed);
                 }
             }
