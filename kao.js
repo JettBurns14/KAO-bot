@@ -109,14 +109,14 @@ client.on('message', message => {
         // Loops through `olympians`, checking for a match with the argument.
 		
         for (var i = 0; i < Object.keys(json).length; i++) {
-            for (var j = 0; j < json.TRedL.length; j++) {
-				//var current = json[Object.keys(json)[i]][j].player;
-				console.log(i + ', ' + j + ', ' + json.TRedL.length);
-				/*if (current === args || current.toLowerCase() === args) {
+            for (var j = 0; j < json[Object.keys(json)[i]].length; j++) {
+				var current = json[Object.keys(json)[i]][j].player;
+				//console.log(i + ', ' + j + ', ' + json.TRedL.length);
+				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
 					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + json[Object.keys(json)[i]][j].events + "```");
 					message.channel.sendEmbed(embed);
-                }*/
+                }
             }
         }
 		/*
