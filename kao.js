@@ -1,7 +1,7 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 const request = require('request');
-const client = new Discord.Client()
-const prefix = '-'
+const client = new Discord.Client();
+const prefix = '-';
 var olympians;
 
 const commands = [
@@ -69,12 +69,12 @@ client.on('ready', () => {
     client.user.setUsername('KAO bot');
     console.log('I am ready Jett!');
 
-	setInterval(function() {
-		totalTime += 1;
-	}, 1000);
-	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
-		olympians = JSON.parse(body).revision.code;
-	});
+    setInterval(function() {
+        totalTime += 1;
+    }, 1000);
+    request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
+        olympians = JSON.parse(body).revision.code;
+    });
 });
 
 client.on('message', message => {
@@ -85,7 +85,7 @@ client.on('message', message => {
     var command = message.content.split(" ")[0];
     command = command.slice(prefix.length).toLowerCase();
 
-    var args = message.content.substring((prefix + 'info '.length));
+    var args = message.content.substring((prefix + 'info ').length);
 
 
     if (command === 'ping') {
