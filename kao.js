@@ -69,7 +69,7 @@ client.on('ready', () => {
     console.log('I am ready Jett!');
 
 	request('https://www.khanacademy.org/api/labs/scratchpads/5991458534129664', function(error, response, body) {
-		olympians = (JSON.parse(body).revision.code);
+		olympians = JSON.parse(body.revision.code);
 	});
 });
 
@@ -108,17 +108,31 @@ client.on('message', message => {
 		
         // Loops through `olympians`, checking for a match with the argument.
 		
-        for (var i = 0; i < Object.keys(JSON.parse(olympians)).length; i++) {
-            for (var j = 0; j < JSON.parse(olympians).TRedL.length; j++) {
-				//var current = JSON.parse(olympians)[i][j].player;
-				console.log(JSON.parse(olympians)[i][j].player);
+        for (var i = 0; i < Object.keys(olympians).length; i++) {
+            for (var j = 0; j < olympians.TRedL.length; j++) {
+				var current = olympians[Object.keys(olympians)[i]][j].player;
+				
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
-					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + JSON.parse(olympians[i][j]).events + "```");
+					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + olympians[Object.keys(olympians)[i]][j].events + "```");
 					message.channel.sendEmbed(embed);
                 }
             }
         }
+		/*
+		var json = JSON.parse(data.revision.code);
+        for (var i = 0; i < teams.length; ++i) {
+            // Thanks Moore
+            var lengthOfTeam = json[Object.keys(json)[i]].length;      
+			for (var j = 0; j < lengthOfTeam; ++j) {
+				teams[i].innerHTML += 
+				json[Object.keys(json)[i]][j].player + 
+				' - ' + 
+				json[Object.keys(json)[i]][j].events + 
+				((j!==lengthOfTeam-1)?'<li>':'')
+
+			}
+        }*/
     }
     
     else {
