@@ -104,7 +104,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		console.log(Object.keys(olympians.TRedL))
+		console.log(Object.keys(olympians).length)
 		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
