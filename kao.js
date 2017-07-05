@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-var olympians = {};
+var olympians;
 
 const commands = [
     // Random
