@@ -104,7 +104,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage(JSON.parse(olympians).TRedL[20])
+		message.channel.sendMessage(JSON.parse(olympians).TRedL[20].player)
 		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
