@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
+const prefix = '-'
 var olympians;
 
 const commands = [
@@ -64,7 +65,7 @@ var colors = [
 ];
 
 client.on('ready', () => {
-    client.user.setGame('$help');
+    client.user.setGame(prefix + 'help');
     client.user.setUsername('KAO bot');
     console.log('I am ready Jett!');
 
@@ -74,14 +75,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith('$')) return;
+    if (!message.content.startsWith(prefix)) return;
     if (message.author.id === client.user.id) return;
     if (message.author.bot) return;
 
     var command = message.content.split(" ")[0];
-    command = command.slice('$'.length).toLowerCase();
+    command = command.slice(prefix.length).toLowerCase();
 
-    var args = message.content.substring(('$info '.length));
+    var args = message.content.substring((prefix + 'info '.length));
 
 
     if (command === 'ping') {
@@ -104,14 +105,12 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         let json = JSON.parse(olympians);
-		//message.channel.sendMessage('Olympians length = ' + Object.keys(JSON.parse(olympians)).length + '\nTeam length = ' + JSON.parse(olympians).TRedL.length);
-		
+
         // Loops through `olympians`, checking for a match with the argument.
-		
         for (var i = 0; i < Object.keys(json).length; i++) {
             for (var j = 0; j < json[Object.keys(json)[i]].length; j++) {
 				var current = json[Object.keys(json)[i]][j].player;
-				//console.log(i + ', ' + j + ', ' + json.TRedL.length);
+				
 				if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
 					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + json[Object.keys(json)[i]][j].events + "```");
@@ -119,26 +118,12 @@ client.on('message', message => {
                 }
             }
         }
-		/*
-		var json = JSON.parse(data.revision.code);
-        for (var i = 0; i < teams.length; ++i) {
-            // Thanks Moore
-            var lengthOfTeam = json[Object.keys(json)[i]].length;      
-			for (var j = 0; j < lengthOfTeam; ++j) {
-				teams[i].innerHTML += 
-				json[Object.keys(json)[i]][j].player + 
-				' - ' + 
-				json[Object.keys(json)[i]][j].events + 
-				((j!==lengthOfTeam-1)?'<li>':'')
-
-			}
-        }*/
     }
     
     else {
         let embed = new Discord.RichEmbed();
         embed.setColor('#ff0000');
-        embed.addField('Error', ':x: That command is not defined. Use **`$help`** for more.');
+        embed.addField('Error', ':x: That command is not defined. Use **`' + prefix + 'help`** for more.');
         message.channel.sendEmbed(embed);
     }
 });
