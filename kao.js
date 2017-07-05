@@ -112,11 +112,11 @@ client.on('message', message => {
             for (var j = 0; j < json.TRedL.length; j++) {
 				var current = json[Object.keys(json)[i]][j];
 				console.log(current);
-				if (current === args || current.toLowerCase() === args) {
+				/*if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
 					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + json[Object.keys(json)[i]][j].events + "```");
 					message.channel.sendEmbed(embed);
-                }
+                }*/
             }
         }
 		/*
