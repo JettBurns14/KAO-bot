@@ -110,7 +110,7 @@ client.on('message', message => {
 		
         for (var i = 0; i < Object.keys(json).length; i++) {
             for (var j = 0; j < json.TRedL.length; j++) {
-				var current = json[Object.keys(json)[i]][j];
+				var current = json[Object.keys(json)[i]][j].player;
 				console.log(current);
 				/*if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
