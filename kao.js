@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const request = require('request');
 const client = new Discord.Client()
-var olympians;
+var olympians = new Object;
 
 const commands = [
     // Random
@@ -104,7 +104,7 @@ client.on('message', message => {
     if (command === 'info') {
         let embed = new Discord.RichEmbed();
         
-		message.channel.sendMessage(olympians.TRedL[0])
+		message.channel.sendMessage(olympians)
 		
         // Loops through `olympians`, checking for a match with the argument.
 		/*
