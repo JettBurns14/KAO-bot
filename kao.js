@@ -111,7 +111,7 @@ client.on('message', message => {
         for (var i = 0; i < Object.keys(json).length; i++) {
             for (var j = 0; j < json.TRedL.length; j++) {
 				//var current = json[Object.keys(json)[i]][j].player;
-				console.log(i + ', ' + i + ', ' + json.TRedL.length);
+				console.log(i + ', ' + j + ', ' + json.TRedL.length);
 				/*if (current === args || current.toLowerCase() === args) {
 					embed.setColor(colors[i]);
 					embed.addField(current + "'s Info", "**" + current + "'s** events are:\n```" + json[Object.keys(json)[i]][j].events + "```");
